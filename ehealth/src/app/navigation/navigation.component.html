@@ -27,7 +27,7 @@
     <!-- Move the search form into a separate div for alignment -->
     <div class="search-form">
       <form class="form-inline">
-        <input class="form-control" type="text" [(ngModel)]="searchTerm" name="searchTerm" (input)="search()" placeholder="Search" aria-label="Search">
+        <input class="form-control" type="text" [(ngModel)]="searchTerm" name="searchTerm" (input)="onSearch()" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-primary" type="submit">Search</button>
       </form>
     </div>
