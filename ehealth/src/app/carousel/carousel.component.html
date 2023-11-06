@@ -1,0 +1,10 @@
+<div class="container d-flex justify-content-end align-items-center" style="min-height: 100vh; ">
+
+  <p id="welcome-text">Welcome to our <b>eHealth</b> website, your one-stop solution for all your healthcare needs.</p>
+
+  <carousel>
+    <slide *ngFor="let slide of slides">
+      <img [src]="slide.image" alt="Slide Image" style="border-radius: 25px; ">
+    </slide>
+  </carousel>
+</div>

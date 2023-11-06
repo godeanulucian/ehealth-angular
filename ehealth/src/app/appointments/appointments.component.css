@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.main {
+    margin-left: 130px;
+    width: 1325px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.appointment-form {
+    font-family: 'Roboto', sans-serif;
+    width: max-content;
+    height: max-content;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#submit-button {
+    border-radius: 10px;
+    padding: 9px;
+    border: none;
+    color: white;
+    background-color: rgb(50, 50, 237);
+}
