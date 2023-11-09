@@ -1,9 +1,17 @@
-.light-mode {
+.light-mode-body {
     background-color: white;
     color: black;
 }
 
-.dark-mode {
+.dark-mode-body {
     background-color: rgb(56, 56, 56);
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .body {
+        height: 740px;
+        width: 360px;
+    }
+
 }

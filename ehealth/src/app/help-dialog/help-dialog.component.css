@@ -1,0 +1,12 @@
+.mobile-dialog {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Mobile styles */
+  @media only screen and (max-width: 600px) {
+    .mobile-dialog {
+      padding: 10px;
+    }
+  }
+  

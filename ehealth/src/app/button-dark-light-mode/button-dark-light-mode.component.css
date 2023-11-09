@@ -18,3 +18,11 @@
     outline: none;
     margin-left: 80px;
 }
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    #button-dark-light-mode {
+        margin-top: 10px; /* Add top margin for spacing on smaller screens */
+        margin-left: 10px;
+    }
+}

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .main {
-    margin-left: 100px;
+    margin-left: 80px;
     width: 1325px;
     height: 600px;
     display: flex;
@@ -12,12 +12,33 @@
 #lab-text {
     font-family: 'Roboto', sans-serif;
     margin-top: 100px;
-    margin-left: 100px;
+    margin-left: 80px;
     font-size: 22px;
     color: rgb(55, 55, 55);
 }
 
 #lab-video {
     margin-top: 100px;
-    margin-right: 100px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 30px;
+    }
+
+    #lab-video {
+        margin-top: 20px;
+        width: 350px;
+        height: 250px;
+    }
+
+    #lab-text {
+        margin-left: 10px;
+        font-size: 18px;
+        padding: 10px;
+    }
 }

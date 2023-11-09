@@ -11,11 +11,15 @@ export class AppComponent {
   title = 'ehealth';
 
   theme: string | undefined;
+  currentTheme: string | undefined;
 
   constructor(private themeService: ThemeService) { }
 
   ngOnInit() {
-    this.themeService.currentTheme.subscribe(theme => this.theme = theme);
+    this.themeService.currentTheme.subscribe(theme => {
+      this.currentTheme = theme;
+      document.body.className = theme;
+    });
   }
 
   toggleTheme() {

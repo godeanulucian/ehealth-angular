@@ -8,12 +8,8 @@ import { Component } from '@angular/core';
 export class ButtonDarkLightModeComponent {
   theme = 'light-mode';
 
-  toggleTheme(this: any) {
+  toggleTheme() {
     this.theme = this.theme === 'light-mode' ? 'dark-mode' : 'light-mode';
+    document.body.className = this.theme;
   }
-
 }
-
-
-
-

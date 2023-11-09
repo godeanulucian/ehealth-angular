@@ -24,3 +24,24 @@
     color: white;
     background-color: rgb(50, 50, 237);
 }
+
+/* Responsive styles for mobile devices */
+@media only screen and (max-width: 600px) {
+
+    .main {
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .appointment-form {
+        width: 20%; /* Adjust the width as needed for your design */
+        margin-top: 20px;
+    }
+    #appointmentPicture {
+        width: 350px;
+        height: 500px;
+    }
+
+    /* Add any other mobile-specific styles here */
+}

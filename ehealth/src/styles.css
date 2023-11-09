@@ -2,3 +2,12 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import url('app/button-dark-light-mode/button-dark-light-mode.component.css');
+
+@media only screen and (max-width: 600px) {
+    .app-root {
+        height: auto;
+        width: auto;
+    }
+
+}

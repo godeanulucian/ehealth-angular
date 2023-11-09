@@ -2,9 +2,9 @@
 
   <p id="welcome-text">Welcome to our <b>eHealth</b> website, your one-stop solution for all your healthcare needs.</p>
 
-  <carousel>
+  <carousel class="carousel">
     <slide *ngFor="let slide of slides">
-      <img [src]="slide.image" alt="Slide Image" style="border-radius: 25px; ">
+      <img id="slide" [src]="slide.image" alt="Slide Image" style="border-radius: 25px; ">
     </slide>
   </carousel>
 </div>
