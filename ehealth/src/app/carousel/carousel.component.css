@@ -7,6 +7,10 @@
     color: rgb(55, 55, 55);
 }
 
+.carousel {
+    margin-left: -50px;
+}
+
 /* Mobile styles */
 @media only screen and (max-width: 600px) {
     .container {

@@ -1,0 +1,57 @@
+/* Highlight the active navigation link */
+.navbar-nav .nav-item.active {
+    background-color: rgb(225, 225, 225);
+    color: #fff;
+  }
+
+.navbar {
+  background-color: rgb(238, 238, 238);
+  width: 1550px;
+}
+
+.containerMain {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.body {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: rgb(115, 115, 115);
+    color: white;
+}
+
+#button-dark-light-mode {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    margin-left: 80px;
+}
+
+
+  
+  #toggle-button {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    #button-dark-light-mode {
+        margin-top: 10px; /* Add top margin for spacing on smaller screens */
+        margin-left: 10px;
+    }
+}

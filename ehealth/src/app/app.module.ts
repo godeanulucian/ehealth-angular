@@ -23,6 +23,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component'; // Import FormsModule
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'appointments', component: AppointmentsComponent },
+  { path: 'tests', component: TestsComponent },
+  { path: 'inventory', component: PharmacyInventoryComponent }
+];
 
 @NgModule({
   declarations: [
@@ -44,6 +53,7 @@ import { SearchComponent } from './search/search.component'; // Import FormsModu
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forChild(routes),
     CarouselModule.forRoot(),
     BrowserAnimationsModule,
     MatDialogModule,

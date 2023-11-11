@@ -5,12 +5,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ThemeService {
-  private theme = new BehaviorSubject('light-mode');
-  currentTheme = this.theme.asObservable();
-
+  // private theme = new BehaviorSubject('light-mode');
+  // currentTheme = this.theme.asObservable();
+  private isDarkMode = false;
   constructor() { }
 
-  changeTheme(theme: string) {
-    this.theme.next(theme);
+  changeTheme() {
+    this.isDarkMode = !this.isDarkMode;   // mirroring
+    document.body.classList.toggle('dark-mode', this.isDarkMode);
   }
 }

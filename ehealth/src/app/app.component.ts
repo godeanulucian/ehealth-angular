@@ -15,20 +15,20 @@ export class AppComponent {
 
   constructor(private themeService: ThemeService) { }
 
-  ngOnInit() {
-    this.themeService.currentTheme.subscribe(theme => {
-      this.currentTheme = theme;
-      document.body.className = theme;
-    });
-  }
+  // ngOnInit() {
+  //   this.themeService.currentTheme.subscribe(theme => {
+  //     this.currentTheme = theme;
+  //     document.body.className = theme;
+  //   });
+  // }
 
-  toggleTheme() {
-    if (this.theme === 'light-mode') {
-      this.themeService.changeTheme('dark-mode');
-    } else {
-      this.themeService.changeTheme('light-mode');
-    }
-  }
+  // toggleTheme() {
+  //   if (this.theme === 'light-mode') {
+  //     this.themeService.changeTheme('dark-mode');
+  //   } else {
+  //     this.themeService.changeTheme('light-mode');
+  //   }
+  // }
 }
 
 

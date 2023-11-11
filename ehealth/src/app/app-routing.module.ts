@@ -6,13 +6,7 @@ import { TestsComponent } from './tests/tests.component';
 import { PharmacyInventoryComponent } from './pharmacy-inventory/pharmacy-inventory.component';
 
 
-const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'appointments', component: AppointmentsComponent },
-  { path: 'tests', component: TestsComponent },
-  { path: 'inventory', component: PharmacyInventoryComponent }
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

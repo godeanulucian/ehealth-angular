@@ -12,17 +12,7 @@ export class ButtonDownComponent {
   theme:string | undefined;
   constructor(private themeService: ThemeService) { }
 
-  ngOnInit() {
-    this.themeService.currentTheme.subscribe(theme => this.theme = theme);
-  }
-
-  toggleTheme() {
-    if (this.theme === 'light-mode') {
-      this.themeService.changeTheme('dark-mode');
-    } else {
-      this.themeService.changeTheme('light-mode');
-    }
-  }
+  
 
   scrollToBottom() {
     window.scrollTo({

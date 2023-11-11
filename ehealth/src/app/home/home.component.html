@@ -1,2 +1,48 @@
+<div class="containerMain theme" [ngClass]="theme">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
 
-<app-carousel></app-carousel>
+            <!-- Brand/logo -->
+            <a class="navbar-brand" routerLink="/home">eHealth</a>
+
+            <!-- Add a button to toggle the navigation links on small screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/appointments">Appointments</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/tests">Laboratory Tests</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/inventory">Pharmacy Inventory</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Move the search form into a separate div for alignment -->
+            <div class="search-form ml-auto"> <!-- ml-auto pushes the search form to the right -->
+                <form class="form-inline">
+                    <input class="form-control" type="text" [(ngModel)]="searchTerm" name="searchTerm"
+                        (input)="onSearch()" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="body" [ngClass]="{'dark-mode': x, 'light-mode': !x}">
+        <button id="button-dark-light-mode" (click)="toggleMode()"><img src="assets/theme.png"
+            alt="button-dark-light-mode"></button>
+        <app-button-down></app-button-down>
+        <app-carousel></app-carousel>
+        <app-button-help></app-button-help>
+        <app-button-up></app-button-up>
+    </div>
+    <app-footer></app-footer>
+</div>
