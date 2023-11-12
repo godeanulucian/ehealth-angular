@@ -3,7 +3,7 @@
     height: 40px;
     border: none;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: inherit;
     outline: none;
     margin-left: 1290px;
 }

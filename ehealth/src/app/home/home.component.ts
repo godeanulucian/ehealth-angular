@@ -7,17 +7,10 @@ import { ThemeService } from '../theme.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  searchTerm: string = '';
-
-  @Output() searchEvent = new EventEmitter<string>();
-  onSearch() {
-    this.searchEvent.emit(this.searchTerm);
-  }
+  x: boolean = false;
   theme = 'light-mode';
 
   constructor(private darkModeService:ThemeService) {}
-
-  x: boolean = false;
 
   toggleMode() {
     this.x = !this.x;

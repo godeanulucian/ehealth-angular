@@ -1,5 +1,4 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { SearchComponent } from '../search/search.component';
 
 
 @Component({
@@ -9,9 +8,10 @@ import { SearchComponent } from '../search/search.component';
 })
 export class NavigationComponent {
   searchTerm: string = '';
-
+ 
   @Output() searchEvent = new EventEmitter<string>();
   onSearch() {
     this.searchEvent.emit(this.searchTerm);
   }
+
 }

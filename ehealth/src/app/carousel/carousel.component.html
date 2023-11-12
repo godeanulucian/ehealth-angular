@@ -2,14 +2,15 @@
 
   <div class="row">
     <div class="col-lg">
-  <p id="welcome-text">Welcome to our <b>eHealth</b> website, your one-stop solution for all your healthcare needs.</p>
-</div>
-<div class="col-lg">
-  <carousel class="carousel">
-    <slide *ngFor="let slide of slides">
-      <img id="slide" [src]="slide.image" alt="Slide Image" style="border-radius: 25px; ">
-    </slide>
-  </carousel>
+      <p id="welcome-text">Welcome to our <b>eHealth</b> website, your one-stop solution for all your healthcare needs.
+      </p>
+    </div>
+    <div class="col-lg col-carousel">
+      <carousel class="carousel">
+        <slide *ngFor="let slide of slides">
+          <img id="slide" [src]="slide.image" alt="Slide Image" style="border-radius: 25px; width: 700px; height: 438px;">
+        </slide>
+      </carousel>
+    </div>
   </div>
-</div>
 </div>

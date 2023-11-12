@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-pharmacy-inventory',
@@ -7,7 +8,7 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
   styleUrls: ['./pharmacy-inventory.component.css']
 })
 export class PharmacyInventoryComponent {
-  constructor(private $gaService: GoogleAnalyticsService) {}
+  constructor(private $gaService: GoogleAnalyticsService, private darkModeService:ThemeService) {}
 
   trackEvent() {
     this.$gaService.event('eventName', 'eventCategory', 'eventLabel');

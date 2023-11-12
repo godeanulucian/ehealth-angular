@@ -1,4 +1,4 @@
-/* Highlight the active navigation link */
+
 .navbar-nav .nav-item.active {
     background-color: rgb(225, 225, 225);
     color: #fff;

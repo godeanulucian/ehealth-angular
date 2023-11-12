@@ -5,8 +5,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ThemeService {
-  // private theme = new BehaviorSubject('light-mode');
-  // currentTheme = this.theme.asObservable();
   private isDarkMode = false;
   constructor() { }
 

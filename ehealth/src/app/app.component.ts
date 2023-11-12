@@ -10,25 +10,14 @@ import { ThemeService } from './theme.service';
 export class AppComponent {
   title = 'ehealth';
 
-  theme: string | undefined;
-  currentTheme: string | undefined;
+  x: boolean = false;
+  theme = 'light-mode';
 
-  constructor(private themeService: ThemeService) { }
+  constructor(private darkModeService:ThemeService) {}
 
-  // ngOnInit() {
-  //   this.themeService.currentTheme.subscribe(theme => {
-  //     this.currentTheme = theme;
-  //     document.body.className = theme;
-  //   });
-  // }
-
-  // toggleTheme() {
-  //   if (this.theme === 'light-mode') {
-  //     this.themeService.changeTheme('dark-mode');
-  //   } else {
-  //     this.themeService.changeTheme('light-mode');
-  //   }
-  // }
+  toggleMode() {
+    this.x = !this.x;
+  }
 }
 
 

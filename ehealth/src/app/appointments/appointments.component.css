@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .main {
-    margin-left: 130px;
-    width: 1325px;
-    height: 600px;
+    margin-left: 100px;
+    width: 1300px;
+    height: 650px;
     display: flex;
     justify-content: space-between;
 }
@@ -25,7 +25,30 @@
     background-color: rgb(50, 50, 237);
 }
 
-/* Responsive styles for mobile devices */
+.light-mode {
+    background-color: rgb(252, 249, 249);
+}
+
+.dark-mode {
+    background-color: rgb(115, 115, 115);
+    color: black;
+}
+
+#button-dark-light-mode {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: inherit;
+    outline: none;
+    margin-left: 80px;
+}
+
+#toggle-button {
+    padding: 10px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
 
     .main {
@@ -35,13 +58,15 @@
         align-items: flex-start;
     }
     .appointment-form {
-        width: 20%; /* Adjust the width as needed for your design */
+        width: 20%;
         margin-top: 20px;
     }
     #appointmentPicture {
         width: 350px;
         height: 500px;
     }
-
-    /* Add any other mobile-specific styles here */
+    #button-dark-light-mode {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
 }
