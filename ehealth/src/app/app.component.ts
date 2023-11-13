@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ThemeService } from './theme.service';
+import { NavigationEnd, Router } from '@angular/router';
+declare let gtag: Function;
 
 @Component({
   selector: 'app-root',
@@ -13,14 +15,15 @@ export class AppComponent {
   x: boolean = false;
   theme = 'light-mode';
 
-  constructor(private darkModeService:ThemeService) {}
+  constructor(private darkModeService: ThemeService, private router: Router) { 
+  this.router.events.subscribe((event) => {
+    if (event instanceof NavigationEnd) {
+      gtag('config', 'G-7PQKTZ711Q', { 'page_path': event.urlAfterRedirects });
+    }      
+  })
+}
 
   toggleMode() {
     this.x = !this.x;
   }
 }
-
-
-
-
-

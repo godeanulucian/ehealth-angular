@@ -58,7 +58,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatDialogModule,
     FlexLayoutModule,
-    NgxGoogleAnalyticsModule.forRoot('Your Google Analytics tracking ID'),
+    NgxGoogleAnalyticsModule.forRoot('G-7PQKTZ711Q'),
     NgxGoogleAnalyticsRouterModule,
     FormsModule
   ],
