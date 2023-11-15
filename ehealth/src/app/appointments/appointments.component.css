@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+#patientName,
+#doctorName,
+#reason,
+#date,
+#time,
+#email,
+#phoneNumber {
+    float: right;
+    width: 189.6px;
+}
+
 .main {
     margin-left: 80px;
     width: 1300px;
@@ -105,19 +116,27 @@
 @media only screen and (max-width: 600px) {
 
     .main {
+        width: 100%;
         margin-left: 30px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .body {
+        width: 600px;
+    }
+
     .appointment-form {
         width: 20%;
         margin-top: 20px;
     }
+
     #appointmentPicture {
-        width: 350px;
-        height: 500px;
+        max-width: 100%;
+        height: auto;
     }
+
     #button-dark-light-mode {
         margin-top: 10px;
         margin-left: 10px;

@@ -7,26 +7,25 @@
 
         <img class="appointmentPicture slideRight" src="assets/appointment.png" alt="appointment">
 
-        <form class="appointment-form slideLeft" action="/submit_form" method="post"
+        <form class="appointment-form slideLeft" action="/submit_form" method="post" (ngSubmit)="handleSubmit()"
             style="background-image: url('../assets/just-wave.png');">
             <b>
                 <h4>Schedule an appointment</h4>
             </b><br>
             <label for="patientName">Patient Name:</label>
-            <input type="text" id="patientName" name="patientName" required style="float: right;"><br><br>
+            <input type="text" id="patientName" name="patientName" required><br><br>
             <label for="doctorName">Doctor Name:</label>
-            <input type="text" id="doctorName" name="doctorName" required style="float: right;"><br><br>
+            <input type="text" id="doctorName" name="doctorName" required><br><br>
             <label for="reason">Reason:</label>
-            <input type="text" id="reason" name="reason" required style="float: right;"><br><br>
+            <input type="text" id="reason" name="reason" required><br><br>
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required style="float: right; width: 189.6px;"><br><br>
+            <input type="date" id="date" name="date" required><br><br>
             <label for="time">Time:</label>
-            <input type="time" id="time" name="time" required style="float: right; width: 189.6px;"><br><br>
+            <input type="time" id="time" name="time" required><br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required style="float: right;"><br><br>
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required
-                style="float: right;"><br><br>
+            <input type="text" id="email" name="email" required><br><br>
+            <label for="phoneNumber">Phone:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required><br><br>
             <input id="submit-button" type="submit" value="Submit">
         </form>
     </div>
