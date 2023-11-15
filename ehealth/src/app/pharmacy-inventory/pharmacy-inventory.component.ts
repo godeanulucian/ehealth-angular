@@ -32,6 +32,8 @@ export class PharmacyInventoryComponent {
     { itemID: 8, itemName: 'Allergy Medication', provider: 'AllerCare', stockLevel: 25, unitPrice: 30.00, expirationDate: '2023-10-31' },
     { itemID: 9, itemName: 'Eye Drops', provider: 'ClearSight', stockLevel: 15, unitPrice: 14.99, expirationDate: '2023-09-10' },
     { itemID: 10, itemName: 'Stomach Relief Tablets', provider: 'GastroHealth', stockLevel: 50, unitPrice: 22.50, expirationDate: '2024-01-15' },
+    { itemID: 11, itemName: 'Sleep Aid Pills', provider: 'DreamWell', stockLevel: 20, unitPrice: 19.75, expirationDate: '2023-12-10' },
+  { itemID: 12, itemName: 'Joint Pain Relief Cream', provider: 'FlexiCare', stockLevel: 35, unitPrice: 16.99, expirationDate: '2023-11-25' }
   ];
   
   filteredData: any[] = this.items.slice();

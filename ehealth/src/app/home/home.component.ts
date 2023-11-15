@@ -10,7 +10,7 @@ export class HomeComponent {
   x: boolean = false;
   theme = 'light-mode';
 
-  constructor(private darkModeService:ThemeService) {}
+  constructor(private themeService:ThemeService) {}
 
   toggleMode() {
     this.x = !this.x;

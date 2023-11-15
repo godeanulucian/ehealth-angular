@@ -1,16 +1,14 @@
-<div class="container d-flex justify-content-end align-items-center" style="min-height: 100vh; ">
-
-  <div class="row">
-    <div class="col-lg">
-      <p id="welcome-text">Welcome to our <b>eHealth</b> website, your one-stop solution for all your healthcare needs.
-      </p>
-    </div>
-    <div class="col-lg col-carousel">
-      <carousel class="carousel">
-        <slide *ngFor="let slide of slides">
-          <img id="slide" [src]="slide.image" alt="Slide Image" style="border-radius: 25px; width: 700px; height: 438px;">
-        </slide>
-      </carousel>
-    </div>
+<div class="main">
+  <div class="welcome-text riseUp" style="background-image: url('../assets/just-wave-x1.png');">
+    <p id="welcome-text">Welcome to <b>IriHealth</b>, our eHealth website and your one-stop solution for all your
+      healthcare needs. <br><br>
+      Discover a <b>seamless experience</b> where you can effortlessly schedule appointments, undergo essential
+      laboratory
+      tests, and conveniently purchase from our extensive online pharmacy.</p>
   </div>
+  <carousel class="carousel fallDown">
+    <slide *ngFor="let slide of slides">
+      <img id="slide" [src]="slide.image" alt="Slide Image">
+    </slide>
+  </carousel>
 </div>

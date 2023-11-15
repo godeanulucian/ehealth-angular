@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .main {
-    margin-left: 80px;
+    margin-left: 60px;
     width: 1325px;
     height: 600px;
     display: flex;
@@ -14,22 +14,36 @@
     margin-top: 100px;
     margin-left: 80px;
     font-size: 22px;
-    color: rgb(55, 55, 55);
+    justify-content: end;
 }
 
 #lab-video {
     margin-top: 100px;
-    margin-right: 10px;
+    margin-left: 60px;
+}
+
+#button-dark-light-mode img {
+    transition: transform 0.8s ease;
+}
+
+.dark-mode #button-dark-light-mode {
+    background-color: inherit;
+}
+
+.dark-mode #button-dark-light-mode img {
+    transform: rotate(180deg);
 }
 
 .light-mode {
     background-color: rgb(252, 249, 249);
-    color: black;
+    color: rgb(55, 55, 55);
+    transition: background-color 0.8s ease;
 }
 
 .dark-mode {
     background-color: rgb(115, 115, 115);
-    color: white;
+    color: rgb(252, 249, 249);
+    transition: background-color 0.8s ease;
 }
 
 #button-dark-light-mode {
@@ -45,6 +59,22 @@
 #toggle-button {
     padding: 10px;
     cursor: pointer;
+}
+
+@keyframes riseUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.riseUp {
+    animation: riseUp 0.7s ease-out;
 }
 
 @media only screen and (max-width: 600px) {

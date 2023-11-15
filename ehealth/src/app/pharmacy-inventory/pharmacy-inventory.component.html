@@ -1,34 +1,35 @@
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container">
 
-      <a class="navbar-brand" routerLink="/home">eHealth</a>
+    <a class="navbar-brand" routerLink="/home"><img id="logo" src="assets/app-logo.png" alt="app-logo"></a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-              <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" routerLink="/appointments">Appointments</a>
-              </li>
-              <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" routerLink="/tests">Laboratory Tests</a>
-              </li>
-              <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" routerLink="/inventory">Pharmacy Inventory</a>
-              </li>
-          </ul>
-      </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/appointments">Appointments</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/tests">Laboratory Tests</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/inventory">Pharmacy Inventory</a>
+        </li>
+      </ul>
+    </div>
 
-      <!-- Move the search form into a separate div for alignment -->
-      <div class="search-form ml-auto"> <!-- ml-auto pushes the search form to the right -->
-          <form class="form-inline">
-            <input class="form-control" type="text" [(ngModel)]="searchTerm" name="searchTerm" (input)="onSearch()" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">Search</button>
-          </form>
-      </div>
+    <!-- Move the search form into a separate div for alignment -->
+    <div class="search-form ml-auto"> <!-- ml-auto pushes the search form to the right -->
+      <form class="form-inline">
+        <input class="form-control" type="text" [(ngModel)]="searchTerm" name="searchTerm" (input)="onSearch()"
+          placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </form>
+    </div>
   </div>
 </nav>
 
@@ -38,7 +39,7 @@
       alt="button-dark-light-mode"></button>
   <app-button-down></app-button-down>
   <div class="main">
-    <table class="pharma-table">
+    <table class="pharma-table slideRight">
       <thead>
         <tr>
           <th>Item ID</th>
@@ -61,9 +62,11 @@
       </tbody>
     </table>
 
-    <div class="second" >
-      <p>picture about meds</p>
-      <p>text about meds</p>
+    <div class="infoDiv">
+      <img class="image fallDown" src="assets/inventory.jpg" alt="inventory">
+      <p class="text slideLeft">Explore our extensive range of medications, thoughtfully curated to cater to a diverse array of needs
+        and ensure your well-being. At IriHealth, we prioritize your health and convenience, offering a comprehensive
+        selection of <b>quality medications</b> to support your journey to optimal health.</p>
     </div>
 
   </div>
