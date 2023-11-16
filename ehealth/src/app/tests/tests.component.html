@@ -3,27 +3,32 @@
   <button id="button-dark-light-mode" (click)="toggleMode()"><img src="assets/theme.png"
       alt="button-dark-light-mode"></button>
   <app-button-down></app-button-down>
-  <div class="main riseUp">
 
-    <p id="lab-text">
-      Our laboratory tests are of <b>high quality and accuracy</b>. <br><br>
-      <span style="color: blue;"><b>✓</b></span> They are performed by qualified and experienced staff, using
-      state-of-the-art equipment and methods. <br>
-      <span style="color: blue;"><b>✓</b></span> Our tests can detect various diseases, infections, and abnormalities in
-      the body. <br>
-      <span style="color: blue;"><b>✓</b></span> They can also monitor the effectiveness of treatments and medications.
-      <br>
-      <span style="color: blue;"><b>✓</b></span> Our laboratory tests are reliable, fast, and affordable. <br>
-      <span style="color: blue;"><b>✓</b></span> They are essential for maintaining good health and well-being.
-    </p>
+  <div class="container main">
+    <div class="row riseUp">
 
-    <video id="lab-video" width="600" height="350" controls>
-      <source src="assets/lab-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+      <p id="lab-text" class="col-ml" >
+        Our laboratory tests are of <b>high quality and accuracy</b>. <br><br>
+        <span style="color: blue;"><b>✓</b></span> They are performed by qualified and experienced staff, using
+        state-of-the-art equipment and methods. <br>
+        <span style="color: blue;"><b>✓</b></span> Our tests can detect various diseases, infections, and abnormalities
+        in
+        the body. <br>
+        <span style="color: blue;"><b>✓</b></span> They can also monitor the effectiveness of treatments and
+        medications.
+        <br>
+        <span style="color: blue;"><b>✓</b></span> Our laboratory tests are reliable, fast, and affordable. <br>
+        <span style="color: blue;"><b>✓</b></span> They are essential for maintaining good health and well-being.
+      </p>
 
+      <video id="lab-video" class="img-fluid col-ml" width="600" height="350" controls>
+        <source src="assets/lab-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+    </div>
+    <app-button-help></app-button-help>
+    <app-button-up></app-button-up>
   </div>
-  <app-button-help></app-button-help>
-  <app-button-up></app-button-up>
 </div>
 <app-footer></app-footer>

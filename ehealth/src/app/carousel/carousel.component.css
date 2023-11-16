@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .main {
-    margin-left: 60px;
-    margin-top: 50px;
-    width: 1300px;
-    height: 650px;
-    display: flex;
-    justify-content: space-between;
+    width: 80%;
+    height: auto;
+}
+
+.welcome-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    justify-content: end;
+    width: 600px;
+    height: 300px;
+    border-radius: 80px;
+    background-color: inherit;
+}
+
+#slide {
+    border-radius: 25px;
+    
 }
 
 @keyframes fallDown {
@@ -41,53 +52,8 @@
     animation: riseUp 0.7s ease-out;
 }
 
-.welcome-text {
-    margin-left: 60px;
-    margin-top: 110px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    justify-content: end;
-    width: 600px;
-    height: 300px;
-    border-radius: 80px;
-    background-color: inherit;
-}
-
-.carousel {
-    margin-right: -70px;
-}
-
-#slide {
-    border-radius: 25px;
-    width: 700px;
-    height: 438px;
-    margin-top: 20px;
-}
-
 @media only screen and (max-width: 600px) {
-    .container {
-        margin-top: -450px;
-        margin-left: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     #welcome-text {
         font-size: 17px;
-        margin-left: 0px;
-    }
-
-    .carousel {
-        margin-top: 20px;
-    }
-
-    #slide {
-        max-width: 300px;
-        max-height: 200px;
-    }
-
-    .col-carousel {
-        margin-left: 0px;
     }
 }

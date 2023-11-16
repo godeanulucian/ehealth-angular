@@ -38,39 +38,45 @@
   <button id="button-dark-light-mode" (click)="toggleMode()"><img src="assets/theme.png"
       alt="button-dark-light-mode"></button>
   <app-button-down></app-button-down>
-  <div class="main">
-    <table class="pharma-table slideRight">
-      <thead>
-        <tr>
-          <th>Item ID</th>
-          <th>Item Name</th>
-          <th>Provider</th>
-          <th>Stock Level</th>
-          <th>Unit Price</th>
-          <th>Expiration Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of filteredData">
-          <td>{{item.itemID}}</td>
-          <td>{{item.itemName}}</td>
-          <td>{{item.provider}}</td>
-          <td>{{item.stockLevel}}</td>
-          <td>${{item.unitPrice}}</td>
-          <td>{{item.expirationDate}}</td>
-        </tr>
-      </tbody>
-    </table>
 
-    <div class="infoDiv">
-      <img class="image fallDown" src="assets/inventory.jpg" alt="inventory">
-      <p class="text slideLeft">Explore our extensive range of medications, thoughtfully curated to cater to a diverse array of needs
-        and ensure your well-being. At IriHealth, we prioritize your health and convenience, offering a comprehensive
-        selection of <b>quality medications</b> to support your journey to optimal health.</p>
+  <div class="container main">
+    <div class="row justify-content-center align-items-center justify-content-between">
+      <table class="col-ml pharma-table slideRight">
+        <thead>
+          <tr>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Provider</th>
+            <th>Stock Level</th>
+            <th>Unit Price</th>
+            <th>Expiration Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of filteredData">
+            <td>{{item.itemID}}</td>
+            <td>{{item.itemName}}</td>
+            <td>{{item.provider}}</td>
+            <td>{{item.stockLevel}}</td>
+            <td>${{item.unitPrice}}</td>
+            <td>{{item.expirationDate}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="container col-ml infoDiv">
+        <div class="row justify-content-center align-items-center justify-content-between">
+          <img class="col-ml img-fluid image fallDown" src="assets/inventory.jpg" alt="inventory">
+          <p class="col-ml text slideLeft">Explore our extensive range of medications, thoughtfully curated to cater to a
+            diverse array of needs
+            and ensure your well-being. At IriHealth, we prioritize your health and convenience, offering a
+            comprehensive
+            selection of <b>quality medications</b> to support your journey to optimal health.</p>
+        </div>
+      </div>
     </div>
-
+    <app-button-help></app-button-help>
+    <app-button-up></app-button-up>
   </div>
-  <app-button-help></app-button-help>
-  <app-button-up></app-button-up>
 </div>
 <app-footer></app-footer>

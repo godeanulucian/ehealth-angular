@@ -7,12 +7,8 @@
 }
 
 .main {
-    margin-left: 60px;
-    margin-bottom: 50px;
-    width: 1325px;
-    height: 600px;
-    display: flex;
-    justify-content: space-between;
+    width: 80%;
+    height: auto;
 }
 
 .navbar-nav .nav-item.active {
@@ -26,13 +22,11 @@
 
 .pharma-table {
     font-family: 'Roboto', sans-serif;
-    margin-top: 30px;
-    margin-left: 80px;
     font-size: 15px;
     color: rgb(55, 55, 55);
     border-collapse: collapse;
     width: 45%;
-    height: 300px;
+    height: auto;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -96,19 +90,18 @@ tr:nth-child(even) {
 }
 
 .infoDiv {
-    margin-top: 30px;
+
 }
 
 .image {
-    width: 550px;
-    height: 350px;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .text {
-    margin-top: 30px;
     width: 550px;
     justify-content: end;
     font-family: 'Roboto', sans-serif;
@@ -164,24 +157,12 @@ tr:nth-child(even) {
 }
 
 @media only screen and (max-width: 600px) {
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        width: auto;
-        margin-left: 5px; /* Adjust the margin as needed */
-    }
 
     .pharma-table {
-        height: auto;
-        width: auto;
-        margin-top: 5px; /* Adjust the margin as needed */
-        margin-left: 5px; /* Adjust the margin as needed */
-        font-size: 12px; /* Adjust font size for smaller screens */
+        font-size: 14px;
     }
-    #button-dark-light-mode {
-        margin-top: 10px;
-        margin-left: 10px;
+
+    .text {
+        font-size: 18px;
     }
 }
