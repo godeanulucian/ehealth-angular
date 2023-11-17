@@ -15,46 +15,66 @@
 
             <img class="img-fluid col-ml appointmentPicture slideRight" src="assets/appointment.png" alt="appointment">
 
-            <form class="needs-validation col-ml appointment-form slideLeft" action="appointments.component.html"
-                method="post" (ngSubmit)="handleSubmit()" style="background-image: url('../assets/just-wave.png');">
+            <form class="col-ml appointment-form slideLeft" [formGroup]="appointmentForm" (ngSubmit)="handleSubmit()"
+                style="background-image: url('../assets/just-wave.png');">
                 <b>
-                    <h4>Schedule an appointment</h4>
+                    <h4 class="text-center">Schedule an appointment</h4>
                 </b><br>
                 <div class="form-group">
                     <label for="patientName" class="mr-sm-2">Patient Name:</label>
-                    <input type="text" id="patientName" name="patientName" class="form-control" required/>
+                    <input type="text" id="patientName" formControlName="patientName" class="form-control">
+                    <div *ngIf="appointmentForm.get('patientName')?.invalid && appointmentForm.get('patientName')?.touched"
+                        style="color: red;">Bad credentials</div>
                 </div>
                 <div class="form-group">
-                    <label for="doctorName">Doctor Name:</label>
-                    <input type="text" id="doctorName" name="doctorName" class="form-control" required/>
+                    <label for="doctorName" class="mr-sm-2">Doctor Name:</label>
+                    <input type="text" id="doctorName" name="doctorName" class="form-control" required
+                        [(ngModel)]="doctorName" #doctorNameInput="ngModel" />
+                    <div *ngIf="doctorNameInput.invalid && (doctorNameInput.dirty || doctorNameInput.touched)"
+                        style="color: red;">Bad credentials</div>
                 </div>
                 <div class="form-group">
-                    <label for="reason">Reason:</label>
-                    <input type="text" id="reason" name="reason" class="form-control" required/>
+                    <label for="reason" class="mr-sm-2">Reason:</label>
+                    <input type="text" id="reason" name="reason" class="form-control" required [(ngModel)]="reason"
+                        #reasonInput="ngModel" />
+                    <div *ngIf="reasonInput.invalid && (reasonInput.dirty || reasonInput.touched)" style="color: red;">
+                        Bad credentials</div>   
                 </div>
                 <div class="form-group">
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date" class="form-control" required/>
+                    <label for="date" class="mr-sm-2">Date:</label>
+                    <input type="date" id="date" name="date" class="form-control" required [(ngModel)]="date"
+                        #dateInput="ngModel" />
+                    <div *ngIf="dateInput.invalid && (dateInput.dirty || dateInput.touched)" style="color: red;">Bad
+                        credentials</div>
                 </div>
                 <div class="form-group">
-                    <label for="time">Time:</label>
-                    <input type="time" id="time" name="time" class="form-control" required/>
+                    <label for="time" class="mr-sm-2">Time:</label>
+                    <input type="time" id="time" name="time" class="form-control" required [(ngModel)]="time"
+                        #timeInput="ngModel" />
+                    <div *ngIf="timeInput.invalid && (timeInput.dirty || timeInput.touched)" style="color: red;">Bad
+                        credentials</div>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" class="form-control" required/>
+                    <label for="email" class="mr-sm-2">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required [(ngModel)]="email"
+                        #emailInput="ngModel" />
+                    <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" style="color: red;">Bad
+                        credentials</div>
                 </div>
                 <div class="form-group">
-                    <label for="phoneNumber">Phone:</label>
+                    <label for="phoneNumber" class="mr-sm-2">Phone:</label>
                     <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" class="form-control"
-                        required/> <br><br>
+                        required [(ngModel)]="phone" #phoneInput="ngModel" /> <br><br>
+                    <div *ngIf="phoneInput.invalid && (phoneInput.dirty || phoneInput.touched)" style="color: red;">Bad
+                        credentials</div>
                 </div>
                 <div class="form-group">
-                    <input id="submit-button" type="submit" value="Submit" class="form-control btn btn-primary mb-2">
+                    <button id="submit-button" type="submit" value="Submit" class="form-control btn btn-primary mb-2">Submit</button>
                 </div>
             </form>
         </div>
     </div>
+    <br><br>
     <app-button-help></app-button-help>
     <app-button-up></app-button-up>
 </div>

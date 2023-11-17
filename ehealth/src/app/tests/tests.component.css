@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .main {
+    margin-top: 5%;
     width: 80%;
-    height: auto;
+    height: 70%;
+
 }
 
 #lab-text {

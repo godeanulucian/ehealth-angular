@@ -16,8 +16,8 @@
 }
 
 .appointmentPicture {
-    width: 701px;
-    height: 628px;
+    max-width: 701px;
+    max-height: 628px;
 }
 
 .appointment-form {

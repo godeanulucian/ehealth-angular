@@ -21,7 +21,7 @@ import { HelpDialogComponent } from './help-dialog/help-dialog.component';
 import { PharmacyInventoryComponent } from './pharmacy-inventory/pharmacy-inventory.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component'; // Import FormsModule
 import { RouterModule, Routes } from '@angular/router';
 
@@ -60,7 +60,8 @@ const routes: Routes = [
     FlexLayoutModule,
     NgxGoogleAnalyticsModule.forRoot('G-7PQKTZ711Q'),
     NgxGoogleAnalyticsRouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ThemeService

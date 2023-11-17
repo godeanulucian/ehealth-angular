@@ -5,4 +5,6 @@
     border-radius: 50%;
     background-color: inherit;
     outline: none;
+    float: right;
+    margin-right: 7%;
 }
