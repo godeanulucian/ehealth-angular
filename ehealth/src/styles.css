@@ -4,10 +4,22 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import url('app/button-dark-light-mode/button-dark-light-mode.component.css');
 
-@media only screen and (max-width: 600px) {
-    .app-root {
-        height: auto;
-        width: auto;
-    }
 
-}
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400; /* Normal */
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+  }
+  

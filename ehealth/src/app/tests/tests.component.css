@@ -5,7 +5,7 @@
     margin-top: 5%;
     width: 80%;
     height: 70%;
-
+    margin-bottom: 3.1%;
 }
 
 #lab-text {
@@ -43,7 +43,15 @@
     transition: background-color 0.8s ease;
 }
 
-
+#button-dark-light-mode {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: inherit;
+    outline: none;
+    margin-left: 5%;
+}
 
 #toggle-button {
     padding: 10px;
@@ -69,5 +77,6 @@
 @media only screen and (max-width: 600px) {
     #lab-text {
         font-size: 18px;
+        margin-bottom: 10%;
     }
 }

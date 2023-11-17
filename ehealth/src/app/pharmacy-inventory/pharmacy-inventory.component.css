@@ -7,8 +7,10 @@
 }
 
 .main {
+    margin-top: 2%;
     width: 80%;
     height: auto;
+    margin-bottom: 5%;
 }
 
 .navbar-nav .nav-item.active {
@@ -25,7 +27,7 @@
     font-size: 15px;
     color: rgb(55, 55, 55);
     border-collapse: collapse;
-    max-width: 45%;
+    width: max-content;
     height: auto;
     border-radius: 8px;
     overflow: hidden;
@@ -81,7 +83,7 @@ tr:nth-child(even) {
     border-radius: 50%;
     background-color: inherit;
     outline: none;
-    margin-left: 80px;
+    margin-left: 5%;
 }
 
 #toggle-button {
@@ -90,18 +92,19 @@ tr:nth-child(even) {
 }
 
 .infoDiv {
-
+    margin-top: -2%;
+    margin-left: 8%;
 }
 
 .image {
-    width: 100%;
-    height: auto;
+    max-width: 550px;
+    max-height: 350px;
     border-radius: 8px;
-    
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .text {
+    margin-top: 5%;
     width: 550px;
     justify-content: end;
     font-family: 'Roboto', sans-serif;
@@ -160,9 +163,17 @@ tr:nth-child(even) {
 
     .pharma-table {
         font-size: 14px;
+        margin-bottom: 25px;
+        margin-left: -8%;
+        margin-top: 20px;
     }
 
     .text {
+        margin-top: 20px;
         font-size: 18px;
+    }
+
+    .infoDiv {
+        margin-left: 0%;
     }
 }

@@ -1,14 +1,10 @@
 <app-navigation></app-navigation>
 <div class="body" [ngClass]="{'dark-mode': x, 'light-mode': !x}">
-    <div class="container">
-        <div class="row justify-content-center justify-content-between">
-            <button id="button-dark-light-mode" class="col-md-6" (click)="toggleMode()"><img src="assets/theme.png"
-                    alt="button-dark-light-mode"></button>
-            <div class="col-md-6">
-                <app-button-down></app-button-down>
-            </div>
-        </div>
-    </div>
+    <button id="button-dark-light-mode" class="col-md-6" (click)="toggleMode()"><img src="assets/theme.png"
+            alt="button-dark-light-mode"></button>
+    
+        <app-button-down></app-button-down>
+    
 
     <div class="container main">
         <div class="row justify-content-center align-items-center justify-content-between">
@@ -22,7 +18,7 @@
                 </b><br>
                 <div class="form-group">
                     <label for="patientName" class="mr-sm-2">Patient Name:</label>
-                    <input type="text" id="patientName" formControlName="patientName" class="form-control">
+                    <input type="text" id="patientName" formControlName="patientName" class="form-control" required />
                     <div *ngIf="appointmentForm.get('patientName')?.invalid && appointmentForm.get('patientName')?.touched"
                         style="color: red;">Bad credentials</div>
                 </div>
@@ -38,7 +34,7 @@
                     <input type="text" id="reason" name="reason" class="form-control" required [(ngModel)]="reason"
                         #reasonInput="ngModel" />
                     <div *ngIf="reasonInput.invalid && (reasonInput.dirty || reasonInput.touched)" style="color: red;">
-                        Bad credentials</div>   
+                        Bad credentials</div>
                 </div>
                 <div class="form-group">
                     <label for="date" class="mr-sm-2">Date:</label>
@@ -69,7 +65,8 @@
                         credentials</div>
                 </div>
                 <div class="form-group">
-                    <button id="submit-button" type="submit" value="Submit" class="form-control btn btn-primary mb-2">Submit</button>
+                    <button id="submit-button" type="submit" value="Submit"
+                        class="form-control btn btn-primary mb-2">Submit</button>
                 </div>
             </form>
         </div>

@@ -13,9 +13,10 @@ export class AppointmentsComponent implements OnInit {
   x: boolean = false;
   theme = 'light-mode';
   authentificationError: boolean = false;
+  
   appointmentForm!: FormGroup;
   // patientName!: string;
-  patientName = new FormControl('');
+  // patientName = new FormControl('');
   doctorName!: string;
   reason!: string;
   date!: string;
@@ -35,6 +36,10 @@ export class AppointmentsComponent implements OnInit {
       email: ['', Validators.required],
       phone: ['', Validators.required]
     });
+  }
+
+  get getPatientName() {
+    return this.appointmentForm.get('patientName');
   }
 
   toggleMode() {
