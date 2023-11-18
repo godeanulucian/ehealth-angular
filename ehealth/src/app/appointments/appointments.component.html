@@ -2,9 +2,9 @@
 <div class="body" [ngClass]="{'dark-mode': x, 'light-mode': !x}">
     <button id="button-dark-light-mode" class="col-md-6" (click)="toggleMode()"><img src="assets/theme.png"
             alt="button-dark-light-mode"></button>
-    
-        <app-button-down></app-button-down>
-    
+
+    <app-button-down></app-button-down>
+
 
     <div class="container main">
         <div class="row justify-content-center align-items-center justify-content-between">
@@ -24,49 +24,43 @@
                 </div>
                 <div class="form-group">
                     <label for="doctorName" class="mr-sm-2">Doctor Name:</label>
-                    <input type="text" id="doctorName" name="doctorName" class="form-control" required
-                        [(ngModel)]="doctorName" #doctorNameInput="ngModel" />
-                    <div *ngIf="doctorNameInput.invalid && (doctorNameInput.dirty || doctorNameInput.touched)"
+                    <input type="text" id="doctorName" formControlName="doctorName" class="form-control" required />
+                    <div *ngIf="appointmentForm.get('doctorName')?.invalid && appointmentForm.get('doctorName')?.touched"
                         style="color: red;">Bad credentials</div>
                 </div>
                 <div class="form-group">
                     <label for="reason" class="mr-sm-2">Reason:</label>
-                    <input type="text" id="reason" name="reason" class="form-control" required [(ngModel)]="reason"
-                        #reasonInput="ngModel" />
-                    <div *ngIf="reasonInput.invalid && (reasonInput.dirty || reasonInput.touched)" style="color: red;">
-                        Bad credentials</div>
+                    <input type="text" id="reason" formControlName="reason" class="form-control" required/>
+                    <div *ngIf="appointmentForm.get('reason')?.invalid && appointmentForm.get('reason')?.touched"
+                        style="color: red;">Bad credentials</div>
                 </div>
                 <div class="form-group">
                     <label for="date" class="mr-sm-2">Date:</label>
-                    <input type="date" id="date" name="date" class="form-control" required [(ngModel)]="date"
-                        #dateInput="ngModel" />
-                    <div *ngIf="dateInput.invalid && (dateInput.dirty || dateInput.touched)" style="color: red;">Bad
-                        credentials</div>
+                    <input type="date" id="date" formControlName="date" class="form-control" required/>
+                    <div *ngIf="appointmentForm.get('date')?.invalid && appointmentForm.get('date')?.touched"
+                        style="color: red;">Bad credentials</div>
                 </div>
                 <div class="form-group">
                     <label for="time" class="mr-sm-2">Time:</label>
-                    <input type="time" id="time" name="time" class="form-control" required [(ngModel)]="time"
-                        #timeInput="ngModel" />
-                    <div *ngIf="timeInput.invalid && (timeInput.dirty || timeInput.touched)" style="color: red;">Bad
-                        credentials</div>
+                    <input type="time" id="time" formControlName="time" class="form-control" required/>
+                    <div *ngIf="appointmentForm.get('time')?.invalid && appointmentForm.get('time')?.touched"
+                        style="color: red;">Bad credentials</div>
                 </div>
                 <div class="form-group">
                     <label for="email" class="mr-sm-2">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control" required [(ngModel)]="email"
-                        #emailInput="ngModel" />
-                    <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" style="color: red;">Bad
-                        credentials</div>
+                    <input type="text" id="email" formControlName="email" class="form-control" required/>
+                    <div *ngIf="appointmentForm.get('email')?.invalid && appointmentForm.get('email')?.touched"
+                        style="color: red;">Bad credentials</div>
                 </div>
                 <div class="form-group">
                     <label for="phoneNumber" class="mr-sm-2">Phone:</label>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" class="form-control"
-                        required [(ngModel)]="phone" #phoneInput="ngModel" /> <br><br>
-                    <div *ngIf="phoneInput.invalid && (phoneInput.dirty || phoneInput.touched)" style="color: red;">Bad
-                        credentials</div>
+                    <input type="tel" id="phoneNumber" formControlName="phoneNumber" class="form-control" required/>
+                    <div *ngIf="appointmentForm.get('phoneNumber')?.invalid && appointmentForm.get('phoneNumber')?.touched"
+                        style="color: red;">Bad credentials</div>
                 </div>
                 <div class="form-group">
-                    <button id="submit-button" type="submit" value="Submit"
-                        class="form-control btn btn-primary mb-2">Submit</button>
+                    <button id="submit-button" mat-raised-button [disabled]="appointmentForm.invalid" type="submit"
+                        value="Submit" class="form-control btn btn-primary mb-2">Submit</button>
                 </div>
             </form>
         </div>

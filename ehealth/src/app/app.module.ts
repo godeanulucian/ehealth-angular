@@ -24,6 +24,11 @@ import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-go
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component'; // Import FormsModule
 import { RouterModule, Routes } from '@angular/router';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatChipsModule} from '@angular/material/chips';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -61,7 +66,12 @@ const routes: Routes = [
     NgxGoogleAnalyticsModule.forRoot('G-7PQKTZ711Q'),
     NgxGoogleAnalyticsRouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule
   ],
   providers: [
     ThemeService

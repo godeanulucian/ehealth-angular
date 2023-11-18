@@ -13,18 +13,10 @@ export class AppointmentsComponent implements OnInit {
   x: boolean = false;
   theme = 'light-mode';
   authentificationError: boolean = false;
-  
-  appointmentForm!: FormGroup;
-  // patientName!: string;
-  // patientName = new FormControl('');
-  doctorName!: string;
-  reason!: string;
-  date!: string;
-  time!: string;
-  email!: string;
-  phone!: string;
 
-  constructor(private darkModeService:ThemeService, private router: Router, private fb:FormBuilder) {}
+  appointmentForm!: FormGroup;
+
+  constructor(private darkModeService: ThemeService, private router: Router, private fb: FormBuilder) { }
 
   ngOnInit() {
     this.appointmentForm = this.fb.group({
@@ -33,13 +25,11 @@ export class AppointmentsComponent implements OnInit {
       reason: ['', Validators.required],
       date: ['', Validators.required],
       time: ['', Validators.required],
-      email: ['', Validators.required],
-      phone: ['', Validators.required]
+      email: ['', Validators.required, Validators.email],
+      phoneNumber: ['', Validators.required, Validators.pattern('[0-9]{10}')]
     });
-  }
 
-  get getPatientName() {
-    return this.appointmentForm.get('patientName');
+    this.appointmentForm.valueChanges.subscribe(console.log);
   }
 
   toggleMode() {
@@ -47,14 +37,10 @@ export class AppointmentsComponent implements OnInit {
   }
 
   handleSubmit() {
-    if (this.appointmentForm.valid) {
-      console.log('Form valid. Execute submit.');
-      alert('Appointment scheduled succesfully!');
-      this.router.navigate(['/appointments']);
-    } else {
-      console.log('Form not valid. Please verify all fields.');
-      alert('Form not valid. Please verify all fields.')
-    }
+    console.log('Form valid. Execute submit.');
+    alert('Appointment scheduled succesfully!');
+    this.router.navigate(['/appointments']);
+    location.reload();
   }
 
 }
