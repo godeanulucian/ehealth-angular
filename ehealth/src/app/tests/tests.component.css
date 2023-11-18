@@ -12,6 +12,8 @@
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     justify-content: end;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 #lab-video {
