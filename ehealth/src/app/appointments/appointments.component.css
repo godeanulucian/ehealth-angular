@@ -30,6 +30,10 @@
     background-color: rgb(248, 245, 245);
 }
 
+#submit-button {
+    margin-top: 5%;
+}
+
 #button-dark-light-mode img {
     transition: transform 0.8s ease;
 }
@@ -112,5 +116,9 @@
 
     .appointmentPicture {
         margin-bottom: 10%;
+    }
+
+    #submit-button {
+        margin-top: 10%;
     }
 }
