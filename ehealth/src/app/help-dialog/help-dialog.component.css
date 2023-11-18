@@ -1,12 +1,15 @@
 .mobile-dialog {
-    text-align: center;
-    padding: 20px;
+  padding: 20px;
+}
+
+#info  {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  .mobile-dialog {
+    padding: 10px;
   }
-  
-  /* Mobile styles */
-  @media only screen and (max-width: 600px) {
-    .mobile-dialog {
-      padding: 10px;
-    }
-  }
-  
+}
