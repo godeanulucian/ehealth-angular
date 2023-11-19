@@ -26,7 +26,8 @@ export class AppointmentsComponent implements OnInit {
       date: ['', Validators.required],
       time: ['', Validators.required],
       email: ['', Validators.required, Validators.email],
-      phoneNumber: ['', Validators.required, Validators.pattern('[0-9]{10}')]
+      phoneNumber: ['', Validators.required, Validators.pattern('[0-9]{10}')],
+      sendConfirmation: [false]
     });
 
     this.appointmentForm.valueChanges.subscribe(console.log);
@@ -38,9 +39,37 @@ export class AppointmentsComponent implements OnInit {
 
   handleSubmit() {
     console.log('Form valid. Execute submit.');
+    if (this.appointmentForm.get('sendConfirmation')?.value) {
+      console.log('Sending mail confirmation...');
+
+      const emailAsStringCoerced = String(this.appointmentForm.get('email')?.value);
+      const appointmentFormAsString = JSON.stringify(this.appointmentForm.value, null, 2);
+
+      console.log('Appointment Details', appointmentFormAsString);
+      this.sendMailToRecipient(emailAsStringCoerced, 'IriHealth - Appointment Confirmation', 'Appointment Details ' + appointmentFormAsString);
+    }
+
     alert('Appointment scheduled succesfully!');
     this.router.navigate(['/appointments']);
-    location.reload();
+    this.appointmentForm.reset();
   }
+
+  public sendMailToRecipient(recipient: string, subject: string, body: string) {  // sends from user's mail client
+    // generate the mailto link
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // create a temporary element (e.g., an anchor tag)
+    const mailtoAnchor = document.createElement('a');
+    mailtoAnchor.href = mailtoLink;
+
+    // trigger a click event on the anchor
+    const clickEvent = new MouseEvent('click', {
+      bubbles: true,
+      cancelable: false,
+      view: window,
+    });
+    mailtoAnchor.dispatchEvent(clickEvent);
+  }
+
 
 }
